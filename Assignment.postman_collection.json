@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "2bb5aa22-ba14-453b-8357-c7bbbdc7482d",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16904562",
+		"_collection_link": "https://restless-rocket-758073.postman.co/workspace/Mylo_Test~e687730e-0ed5-4a79-8810-504abc8c97df/collection/16904562-2bb5aa22-ba14-453b-8357-c7bbbdc7482d?action=share&creator=16904562&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Created_new-assignment",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://relonetuat.aires.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://relonetuat.aires.com/mylo-app/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"loggedInEmpNo\":\"2230\",\"firstName\":\"AutomationTestJWT\",\"lastName\":\"TestJWT\",\"clientId\":49226,\"providerCode\":\"AIRES\",\"officeCode\":\"CRO\",\"journeyTypeCode\":\"LGTM\",\"corporationPolicyId\":21671,\"policy\":\"Extended Business Trip\",\"newRepatInd\":null}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://relonetuat.aires.com/aires-assignment-api/assignment/new-assignment",
+					"protocol": "https",
+					"host": [
+						"relonetuat",
+						"aires",
+						"com"
+					],
+					"path": [
+						"aires-assignment-api",
+						"assignment",
+						"new-assignment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Transferee_Information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://relonetuat.aires.com/aires-assignment-api/transferee/1006132",
+					"protocol": "https",
+					"host": [
+						"relonetuat",
+						"aires",
+						"com"
+					],
+					"path": [
+						"aires-assignment-api",
+						"transferee",
+						"1006132"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Assignment_Basic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"loggedInEmpNo\":\"2230\",\"firstName\":\"AutomationTestJWT\",\"lastName\":\"TestJWT\",\"clientId\":49226,\"providerCode\":\"AIRES\",\"officeCode\":\"CRO\",\"journeyTypeCode\":\"LGTM\",\"corporationPolicyId\":21671,\"policy\":\"Extended Business Trip\",\"newRepatInd\":null}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://relonetuat.aires.com/aires-assignment-api/assignment/new-assignment",
+					"protocol": "https",
+					"host": [
+						"relonetuat",
+						"aires",
+						"com"
+					],
+					"path": [
+						"aires-assignment-api",
+						"assignment",
+						"new-assignment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
