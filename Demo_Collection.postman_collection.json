@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "8b0d7733-615f-486d-b2ed-7dd72c0b52d9",
+		"name": "Demo_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16904562",
+		"_collection_link": "https://restless-rocket-758073.postman.co/workspace/Mylo_Test~e687730e-0ed5-4a79-8810-504abc8c97df/collection/16904562-8b0d7733-615f-486d-b2ed-7dd72c0b52d9?action=share&creator=16904562&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Value_List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Source",
+						"value": "azure"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://relonetuat.aires.com/valuelist-api/key-value?code=SHIPMENT_MODE_ALT",
+					"protocol": "http",
+					"host": [
+						"relonetuat",
+						"aires",
+						"com"
+					],
+					"path": [
+						"valuelist-api",
+						"key-value"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "SHIPMENT_MODE_ALT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Value_List_invalid_value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Not Found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Source",
+						"value": "azure"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://relonetuat.aires.com/valuelist-api/key-value?code=SHIPMENT_MODE_",
+					"protocol": "http",
+					"host": [
+						"relonetuat",
+						"aires",
+						"com"
+					],
+					"path": [
+						"valuelist-api",
+						"key-value"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "SHIPMENT_MODE_"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Value_List_401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Source",
+						"value": "azure"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://relonetuat.aires.com/valuelist-api/key-value?code=SHIPMENT_MODE_ALT",
+					"protocol": "http",
+					"host": [
+						"relonetuat",
+						"aires",
+						"com"
+					],
+					"path": [
+						"valuelist-api",
+						"key-value"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "SHIPMENT_MODE_ALT"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
